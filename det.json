@@ -1,0 +1,22 @@
+[
+  {
+    "Author": "Det",
+    "Name": "AutoHook (CN)",
+    "Punchline": "Makes fishing less (or more) boring",
+    "Description": "Temporary API 10 version until patch 7.1",
+    "Tags": [
+      "Gathering",
+      "Fishing"
+    ],
+    "InternalName": "AutoHook",
+    "RepoUrl": "https://github.com/PunishXIV/AutoHook",
+    "DownloadCount": 971,
+    "LastUpdate": 1731863584244,
+    "DownloadLinkInstall": "https://puni.sh/api/plugins/download/57/AutoHook/versions/latest.zip",
+    "DownloadLinkUpdate": "https://puni.sh/api/plugins/download/57/AutoHook/versions/latest.zip",
+    "AssemblyVersion": "4.3.0.13",
+    "ApplicableVersion": "any",
+    "DalamudApiLevel": "10",
+    "Changelog": "CN AP10 Rollback"
+  }
+]
