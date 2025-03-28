@@ -1,4 +1,4 @@
-name: Build & Publish to Dynamis
+name: Build & Package
 
 on:
   push:
@@ -35,15 +35,22 @@ jobs:
       - name: Build Project
         run: dotnet build --configuration Release AutoHook/AutoHook.csproj -p:AssemblyVersion=${{ env.tag }}
 
-      - name: Publish Version
-        uses: PunishXIV/dynamis-action@v1
-        id: dynamis
+      - name: Package Artifact
+        run: |
+          # 创建构建目录并移动全部输出文件
+          mkdir -p build_output
+          cp -r AutoHook/bin/Release/AutoHook/* build_output/
+          
+          # 打包为带版本号的ZIP文件
+          zip -r AutoHook-${{ env.tag }}.zip build_output
+          
+          # 在根目录生成校验文件
+          sha256sum AutoHook-${{ env.tag }}.zip > checksum.sha256
+
+      - name: Archive Build
+        uses: actions/upload-artifact@v4
         with:
-          plugin_id: 47
-          internal_name: 'AutoHook'
-          version_number: ${{ env.tag }}
-          path: 'AutoHook/bin/Release/AutoHook/latest.zip'
-          type: 'latest'
-          dalamud_version: '11'
-        env:
-          PUBLISHER_KEY: ${{ secrets.PUBLISHER_KEY }}
+          name: AutoHook_${{ env.tag }}
+          path: |
+            AutoHook-${{ env.tag }}.zip
+            checksum.sha256
