@@ -1,9 +1,9 @@
 {
   "Author": "Det",
-  "Name": "AutoHook (CN)",
+  "Name": "AutoHook(CN)",
   "Punchline": "Makes fishing less (or more) boring",
   "Description": "钓鱼走起 It hooks the fish for you, can you believe it?",
-  "InternalName": "AutoHook (CN)",
+  "InternalName": "AutoHook(CN)",
   "RepoUrl": "https://github.com/PunishXIV/AutoHook",
   "ApplicableVersion": "any",
   "Tags": [ "Gathering", "Fishing" ],
