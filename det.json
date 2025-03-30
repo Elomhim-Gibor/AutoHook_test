@@ -14,6 +14,7 @@
     "LastUpdate": 1743155727262,
     "DownloadLinkInstall": "https://raw.githubusercontent.com/Elomhim-Gibor/AutoHook_test/refs/heads/ce05bd6/latest.zip",
     "DownloadLinkUpdate": "https://raw.githubusercontent.com/Elomhim-Gibor/AutoHook_test/refs/heads/ce05bd6/latest.zip",
+    "IconUrl": "https://s3.puni.sh/media/plugin/47/icon-k1slevjorpo.png",
     "AssemblyVersion": "4.3.2.20",
     "ApplicableVersion": "any",
     "DalamudApiLevel": "11",
